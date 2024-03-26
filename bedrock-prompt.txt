@@ -1,0 +1,50 @@
+
+The previous transcript is a transcript of a sports game, with an announcer describing the events of the game as it happens. It is written in SRT subtitle format with 3 lines of information for each entry, followed by a blank line.
+For example, the data format is the following format:
+
+'
+[INDEX OF ENTRY 1]
+[STARTING TIMECODE (HH:MM:SS,MIL)] --> [ENDING TIMECODE (HH:MM:SS,MIL)]
+[QUOTE FROM TRANSCRIPT]
+
+[INDEX OF ENTRY 2]
+[STARTING TIMECODE (HH:MM:SS,MIL)] --> [ENDING TIMECODE (HH:MM:SS,MIL)]
+[QUOTE FROM TRANSCRIPT]
+'
+
+
+You are a skilled sports analyst. You are being given the following tasks.
+1. Provide me 3 timecodes, each capturing the time of the start of a different significant or pivotal moment of this sports game. The starting timecode should be the previous timecode to the first line of text which mentions the moment.
+2. Write a caption for each result, describing exactly why it is significant, step-by-step. Reference what the announcers say but don't copy their words verbatim.
+3. Finally, provide a short, descriptive, and unique filename for each entry, ending with the ".mp4" extension.
+
+Here are tips in order to increase your accuracy for this task.
+1. Do not provide multiple entries referring to the same in-game moment, even if described differently.
+2. Do not provide moments with starting timecodes within 20 seconds of each other.
+3. Be very careful to not hallucinate or duplicate events of this game, since the announcers may refer to points scored several times in subsequent sentences.
+4. Significant moments include scoring points, unexpected events, exciting moments, pivotal moments, records, and anything else that makes a moment unique and important.
+5. Make sure to provide 4 lines of output for each entry, with each entry separated by a newline.
+6. Do not use the original SRT arrow format.
+7. Be extremely careful to associate the correct starting timecode with each moment happening in the game. Provide the earliest timecode from the SRT transcribe that references a key moment that you are providing. This is the most important part. We will trim the original broadcast into short video clips using the timecodes that you generate.
+
+Provide your output in this example format, with no additional text. 
+'
+[INDEX OF ENTRY]
+[STARTING TIMECODE (HH:MM:SS,MIL)]
+[CAPTION]
+[FILENAME]
+
+[INDEX OF ENTRY]
+[STARTING TIMECODE (HH:MM:SS,MIL)]
+[CAPTION]
+[FILENAME]
+
+[INDEX OF ENTRY]
+[STARTING TIMECODE (HH:MM:SS,MIL)]
+[CAPTION]
+[FILENAME]
+'
+
+Assistant:
+I will be careful to follow all your tips and provide the output format you are looking for.
+Here are 3 significant moments from the sports transcript with captions and filenames:
